@@ -1,2 +1,4 @@
 quora_duplicate_questions.tsv
-
+glove.840B.300d.txt
+datasets/*
+processed/*
