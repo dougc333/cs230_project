@@ -1,0 +1,1105 @@
+
+togrep : []
+
+Namespace(LSTM_num_layers=1, batch_size=64, data_dir='/home/dc/cs230_project/dataset', decay=0.99, dpout_fc=0.0, dpout_model=0.0, enc_lstm_dim=2048, encoder_type='InferSent', fc_dim=512, gpu_id=0, lrshrink=5, max_norm=5.0, minlr=1e-05, n_classes=2, n_enc_layers=1, n_epochs=40, nlipath='/home/dc/InferSent/dataset/SNLI', nonlinear_fc=1, optimizer='sgd,lr=0.1', outputdir='savedir/', outputmodelname='infersent.pickle', pool_type='max', seed=1234, weight_decay=0.0005, word_emb_dim=300)
+quora checkpoint len(train[s1]):242494,len(train[s2]):242494,          len(train[label]):242494
+============
+len(valid['s1']):80832, len(valid[s2]):80832,           len(valid['label']):80832
+============
+len(test['s1']):80832,len(test['s2']):80832,           len(test['label']):80832
+Found 88571(/232484) words with glove vectors
+Vocab size : 88571
+NLINet(
+  (encoder): InferSent(
+    (enc_lstm): LSTM(300, 2048, bidirectional=True)
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=16384, out_features=512, bias=True)
+    (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): Dropout(p=0.0)
+    (4): Linear(in_features=512, out_features=512, bias=True)
+    (5): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (6): ReLU()
+    (7): Dropout(p=0.0)
+    (8): Linear(in_features=512, out_features=512, bias=True)
+    (9): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (10): ReLU()
+    (11): Dropout(p=0.0)
+    (12): Linear(in_features=512, out_features=2, bias=True)
+  )
+)
+total num epochs:40
+
+TRAINING : Epoch 1
+Learning rate : 0.1
+<class 'torch.Tensor'> tensor(4181) 4181
+6336 ; loss 0.61 ; sentence/s 94 ; words/s 6146 ; accuracy train : 65.33
+<class 'torch.Tensor'> tensor(8727) 8727
+12736 ; loss 0.54 ; sentence/s 94 ; words/s 6038 ; accuracy train : 68.18
+<class 'torch.Tensor'> tensor(13362) 13362
+19136 ; loss 0.53 ; sentence/s 91 ; words/s 6188 ; accuracy train : 69.59
+<class 'torch.Tensor'> tensor(18075) 18075
+25536 ; loss 0.51 ; sentence/s 93 ; words/s 6024 ; accuracy train : 70.61
+<class 'torch.Tensor'> tensor(22841) 22841
+31936 ; loss 0.49 ; sentence/s 93 ; words/s 6128 ; accuracy train : 71.38
+<class 'torch.Tensor'> tensor(27599) 27599
+38336 ; loss 0.5 ; sentence/s 95 ; words/s 6149 ; accuracy train : 71.87
+<class 'torch.Tensor'> tensor(32369) 32369
+44736 ; loss 0.48 ; sentence/s 94 ; words/s 5991 ; accuracy train : 72.25
+<class 'torch.Tensor'> tensor(37165) 37165
+51136 ; loss 0.48 ; sentence/s 93 ; words/s 6142 ; accuracy train : 72.59
+<class 'torch.Tensor'> tensor(42079) 42079
+57536 ; loss 0.47 ; sentence/s 95 ; words/s 5966 ; accuracy train : 73.05
+<class 'torch.Tensor'> tensor(46978) 46978
+63936 ; loss 0.46 ; sentence/s 93 ; words/s 5948 ; accuracy train : 73.4
+<class 'torch.Tensor'> tensor(51915) 51915
+70336 ; loss 0.46 ; sentence/s 93 ; words/s 5963 ; accuracy train : 73.74
+<class 'torch.Tensor'> tensor(56831) 56831
+76736 ; loss 0.46 ; sentence/s 91 ; words/s 5968 ; accuracy train : 74.0
+<class 'torch.Tensor'> tensor(61779) 61779
+83136 ; loss 0.45 ; sentence/s 94 ; words/s 5829 ; accuracy train : 74.25
+<class 'torch.Tensor'> tensor(66737) 66737
+89536 ; loss 0.44 ; sentence/s 94 ; words/s 6198 ; accuracy train : 74.48
+<class 'torch.Tensor'> tensor(71711) 71711
+95936 ; loss 0.44 ; sentence/s 93 ; words/s 6160 ; accuracy train : 74.7
+<class 'torch.Tensor'> tensor(76656) 76656
+102336 ; loss 0.45 ; sentence/s 94 ; words/s 6203 ; accuracy train : 74.86
+<class 'torch.Tensor'> tensor(81633) 81633
+108736 ; loss 0.44 ; sentence/s 93 ; words/s 6115 ; accuracy train : 75.03
+<class 'torch.Tensor'> tensor(86596) 86596
+115136 ; loss 0.44 ; sentence/s 95 ; words/s 5997 ; accuracy train : 75.17
+<class 'torch.Tensor'> tensor(91643) 91643
+121536 ; loss 0.43 ; sentence/s 93 ; words/s 6194 ; accuracy train : 75.36
+<class 'torch.Tensor'> tensor(96629) 96629
+127936 ; loss 0.44 ; sentence/s 95 ; words/s 5975 ; accuracy train : 75.49
+<class 'torch.Tensor'> tensor(101600) 101600
+134336 ; loss 0.45 ; sentence/s 93 ; words/s 6188 ; accuracy train : 75.6
+<class 'torch.Tensor'> tensor(106590) 106590
+140736 ; loss 0.43 ; sentence/s 94 ; words/s 6087 ; accuracy train : 75.7
+<class 'torch.Tensor'> tensor(111616) 111616
+147136 ; loss 0.42 ; sentence/s 94 ; words/s 6090 ; accuracy train : 75.83
+<class 'torch.Tensor'> tensor(116653) 116653
+153536 ; loss 0.42 ; sentence/s 94 ; words/s 6106 ; accuracy train : 75.95
+<class 'torch.Tensor'> tensor(121646) 121646
+159936 ; loss 0.42 ; sentence/s 94 ; words/s 6014 ; accuracy train : 76.03
+<class 'torch.Tensor'> tensor(126656) 126656
+166336 ; loss 0.43 ; sentence/s 93 ; words/s 6098 ; accuracy train : 76.12
+<class 'torch.Tensor'> tensor(131731) 131731
+172736 ; loss 0.41 ; sentence/s 92 ; words/s 6202 ; accuracy train : 76.23
+<class 'torch.Tensor'> tensor(136788) 136788
+179136 ; loss 0.42 ; sentence/s 94 ; words/s 5997 ; accuracy train : 76.33
+<class 'torch.Tensor'> tensor(141878) 141878
+185536 ; loss 0.42 ; sentence/s 94 ; words/s 6217 ; accuracy train : 76.44
+<class 'torch.Tensor'> tensor(146949) 146949
+191936 ; loss 0.42 ; sentence/s 94 ; words/s 6107 ; accuracy train : 76.54
+<class 'torch.Tensor'> tensor(152026) 152026
+198336 ; loss 0.42 ; sentence/s 95 ; words/s 5918 ; accuracy train : 76.63
+<class 'torch.Tensor'> tensor(157083) 157083
+204736 ; loss 0.42 ; sentence/s 92 ; words/s 6232 ; accuracy train : 76.7
+<class 'torch.Tensor'> tensor(162152) 162152
+211136 ; loss 0.42 ; sentence/s 92 ; words/s 5980 ; accuracy train : 76.78
+<class 'torch.Tensor'> tensor(167249) 167249
+217536 ; loss 0.41 ; sentence/s 94 ; words/s 5936 ; accuracy train : 76.86
+<class 'torch.Tensor'> tensor(172291) 172291
+223936 ; loss 0.42 ; sentence/s 92 ; words/s 5982 ; accuracy train : 76.92
+<class 'torch.Tensor'> tensor(177332) 177332
+230336 ; loss 0.42 ; sentence/s 90 ; words/s 6007 ; accuracy train : 76.97
+<class 'torch.Tensor'> tensor(182377) 182377
+236736 ; loss 0.42 ; sentence/s 95 ; words/s 5895 ; accuracy train : 77.02
+results : epoch 1 ; mean accuracy train : 77.07
+
+VALIDATION : Epoch 1
+togrep : results : epoch 1 ; mean accuracy valid :              79.56
+saving model at epoch 1
+
+TRAINING : Epoch 2
+Learning rate : 0.099
+<class 'torch.Tensor'> tensor(5302) 5302
+6336 ; loss 0.37 ; sentence/s 94 ; words/s 6003 ; accuracy train : 82.84
+<class 'torch.Tensor'> tensor(10579) 10579
+12736 ; loss 0.37 ; sentence/s 92 ; words/s 6149 ; accuracy train : 82.65
+<class 'torch.Tensor'> tensor(15884) 15884
+19136 ; loss 0.37 ; sentence/s 93 ; words/s 6112 ; accuracy train : 82.73
+<class 'torch.Tensor'> tensor(21121) 21121
+25536 ; loss 0.37 ; sentence/s 94 ; words/s 6156 ; accuracy train : 82.5
+<class 'torch.Tensor'> tensor(26417) 26417
+31936 ; loss 0.37 ; sentence/s 93 ; words/s 6271 ; accuracy train : 82.55
+<class 'torch.Tensor'> tensor(31632) 31632
+38336 ; loss 0.38 ; sentence/s 95 ; words/s 5944 ; accuracy train : 82.38
+<class 'torch.Tensor'> tensor(36872) 36872
+44736 ; loss 0.37 ; sentence/s 95 ; words/s 6092 ; accuracy train : 82.3
+<class 'torch.Tensor'> tensor(42134) 42134
+51136 ; loss 0.37 ; sentence/s 93 ; words/s 6115 ; accuracy train : 82.29
+<class 'torch.Tensor'> tensor(47382) 47382
+57536 ; loss 0.37 ; sentence/s 92 ; words/s 6211 ; accuracy train : 82.26
+<class 'torch.Tensor'> tensor(52627) 52627
+63936 ; loss 0.38 ; sentence/s 93 ; words/s 6159 ; accuracy train : 82.23
+<class 'torch.Tensor'> tensor(57929) 57929
+70336 ; loss 0.37 ; sentence/s 94 ; words/s 6120 ; accuracy train : 82.29
+<class 'torch.Tensor'> tensor(63205) 63205
+76736 ; loss 0.37 ; sentence/s 93 ; words/s 5968 ; accuracy train : 82.3
+<class 'torch.Tensor'> tensor(68517) 68517
+83136 ; loss 0.36 ; sentence/s 92 ; words/s 5948 ; accuracy train : 82.35
+<class 'torch.Tensor'> tensor(73855) 73855
+89536 ; loss 0.37 ; sentence/s 93 ; words/s 6148 ; accuracy train : 82.43
+<class 'torch.Tensor'> tensor(79138) 79138
+95936 ; loss 0.37 ; sentence/s 96 ; words/s 5990 ; accuracy train : 82.44
+<class 'torch.Tensor'> tensor(84404) 84404
+102336 ; loss 0.37 ; sentence/s 94 ; words/s 6157 ; accuracy train : 82.43
+<class 'torch.Tensor'> tensor(89722) 89722
+108736 ; loss 0.36 ; sentence/s 93 ; words/s 6077 ; accuracy train : 82.47
+<class 'torch.Tensor'> tensor(94992) 94992
+115136 ; loss 0.37 ; sentence/s 92 ; words/s 6130 ; accuracy train : 82.46
+<class 'torch.Tensor'> tensor(100252) 100252
+121536 ; loss 0.37 ; sentence/s 90 ; words/s 6143 ; accuracy train : 82.44
+<class 'torch.Tensor'> tensor(105573) 105573
+127936 ; loss 0.36 ; sentence/s 93 ; words/s 6022 ; accuracy train : 82.48
+<class 'torch.Tensor'> tensor(110895) 110895
+134336 ; loss 0.35 ; sentence/s 94 ; words/s 6053 ; accuracy train : 82.51
+<class 'torch.Tensor'> tensor(116138) 116138
+140736 ; loss 0.37 ; sentence/s 95 ; words/s 6015 ; accuracy train : 82.48
+<class 'torch.Tensor'> tensor(121435) 121435
+147136 ; loss 0.36 ; sentence/s 93 ; words/s 6145 ; accuracy train : 82.5
+<class 'torch.Tensor'> tensor(126715) 126715
+153536 ; loss 0.37 ; sentence/s 94 ; words/s 6159 ; accuracy train : 82.5
+<class 'torch.Tensor'> tensor(132046) 132046
+159936 ; loss 0.36 ; sentence/s 94 ; words/s 6032 ; accuracy train : 82.53
+<class 'torch.Tensor'> tensor(137329) 137329
+166336 ; loss 0.37 ; sentence/s 93 ; words/s 6021 ; accuracy train : 82.53
+<class 'torch.Tensor'> tensor(142617) 142617
+172736 ; loss 0.36 ; sentence/s 93 ; words/s 6109 ; accuracy train : 82.53
+<class 'torch.Tensor'> tensor(147928) 147928
+179136 ; loss 0.37 ; sentence/s 95 ; words/s 5947 ; accuracy train : 82.55
+<class 'torch.Tensor'> tensor(153289) 153289
+185536 ; loss 0.35 ; sentence/s 94 ; words/s 6078 ; accuracy train : 82.59
+<class 'torch.Tensor'> tensor(158572) 158572
+191936 ; loss 0.38 ; sentence/s 93 ; words/s 6117 ; accuracy train : 82.59
+<class 'torch.Tensor'> tensor(163896) 163896
+198336 ; loss 0.36 ; sentence/s 95 ; words/s 5980 ; accuracy train : 82.61
+<class 'torch.Tensor'> tensor(169195) 169195
+204736 ; loss 0.36 ; sentence/s 94 ; words/s 6047 ; accuracy train : 82.61
+<class 'torch.Tensor'> tensor(174492) 174492
+211136 ; loss 0.36 ; sentence/s 92 ; words/s 5779 ; accuracy train : 82.62
+<class 'torch.Tensor'> tensor(179756) 179756
+217536 ; loss 0.36 ; sentence/s 92 ; words/s 5943 ; accuracy train : 82.61
+<class 'torch.Tensor'> tensor(185097) 185097
+223936 ; loss 0.36 ; sentence/s 92 ; words/s 6122 ; accuracy train : 82.63
+<class 'torch.Tensor'> tensor(190409) 190409
+230336 ; loss 0.35 ; sentence/s 92 ; words/s 6052 ; accuracy train : 82.64
+<class 'torch.Tensor'> tensor(195694) 195694
+236736 ; loss 0.36 ; sentence/s 93 ; words/s 5963 ; accuracy train : 82.64
+results : epoch 2 ; mean accuracy train : 82.65
+
+VALIDATION : Epoch 2
+togrep : results : epoch 2 ; mean accuracy valid :              81.3
+saving model at epoch 2
+
+TRAINING : Epoch 3
+Learning rate : 0.09801
+<class 'torch.Tensor'> tensor(5542) 5542
+6336 ; loss 0.31 ; sentence/s 93 ; words/s 6153 ; accuracy train : 86.59
+<class 'torch.Tensor'> tensor(11066) 11066
+12736 ; loss 0.31 ; sentence/s 92 ; words/s 5797 ; accuracy train : 86.45
+<class 'torch.Tensor'> tensor(16620) 16620
+19136 ; loss 0.3 ; sentence/s 92 ; words/s 6076 ; accuracy train : 86.56
+<class 'torch.Tensor'> tensor(22223) 22223
+25536 ; loss 0.29 ; sentence/s 94 ; words/s 5950 ; accuracy train : 86.81
+<class 'torch.Tensor'> tensor(27790) 27790
+31936 ; loss 0.3 ; sentence/s 95 ; words/s 6042 ; accuracy train : 86.84
+<class 'torch.Tensor'> tensor(33347) 33347
+38336 ; loss 0.3 ; sentence/s 95 ; words/s 5918 ; accuracy train : 86.84
+<class 'torch.Tensor'> tensor(38851) 38851
+44736 ; loss 0.31 ; sentence/s 94 ; words/s 6015 ; accuracy train : 86.72
+<class 'torch.Tensor'> tensor(44353) 44353
+51136 ; loss 0.31 ; sentence/s 94 ; words/s 5936 ; accuracy train : 86.63
+<class 'torch.Tensor'> tensor(49849) 49849
+57536 ; loss 0.31 ; sentence/s 93 ; words/s 6209 ; accuracy train : 86.54
+<class 'torch.Tensor'> tensor(55324) 55324
+63936 ; loss 0.31 ; sentence/s 94 ; words/s 6028 ; accuracy train : 86.44
+<class 'torch.Tensor'> tensor(60891) 60891
+70336 ; loss 0.3 ; sentence/s 94 ; words/s 5969 ; accuracy train : 86.49
+<class 'torch.Tensor'> tensor(66382) 66382
+76736 ; loss 0.31 ; sentence/s 94 ; words/s 5899 ; accuracy train : 86.43
+<class 'torch.Tensor'> tensor(71881) 71881
+83136 ; loss 0.31 ; sentence/s 91 ; words/s 5931 ; accuracy train : 86.4
+<class 'torch.Tensor'> tensor(77379) 77379
+89536 ; loss 0.31 ; sentence/s 92 ; words/s 6174 ; accuracy train : 86.36
+<class 'torch.Tensor'> tensor(82914) 82914
+95936 ; loss 0.3 ; sentence/s 93 ; words/s 6012 ; accuracy train : 86.37
+<class 'torch.Tensor'> tensor(88426) 88426
+102336 ; loss 0.31 ; sentence/s 93 ; words/s 6121 ; accuracy train : 86.35
+<class 'torch.Tensor'> tensor(93981) 93981
+108736 ; loss 0.3 ; sentence/s 93 ; words/s 5984 ; accuracy train : 86.38
+<class 'torch.Tensor'> tensor(99482) 99482
+115136 ; loss 0.31 ; sentence/s 92 ; words/s 6146 ; accuracy train : 86.36
+<class 'torch.Tensor'> tensor(104958) 104958
+121536 ; loss 0.31 ; sentence/s 95 ; words/s 5993 ; accuracy train : 86.31
+<class 'torch.Tensor'> tensor(110429) 110429
+127936 ; loss 0.32 ; sentence/s 93 ; words/s 6013 ; accuracy train : 86.27
+<class 'torch.Tensor'> tensor(115941) 115941
+134336 ; loss 0.3 ; sentence/s 94 ; words/s 6114 ; accuracy train : 86.27
+<class 'torch.Tensor'> tensor(121454) 121454
+140736 ; loss 0.31 ; sentence/s 94 ; words/s 6017 ; accuracy train : 86.26
+<class 'torch.Tensor'> tensor(126917) 126917
+147136 ; loss 0.31 ; sentence/s 94 ; words/s 6101 ; accuracy train : 86.22
+<class 'torch.Tensor'> tensor(132430) 132430
+153536 ; loss 0.31 ; sentence/s 91 ; words/s 6248 ; accuracy train : 86.22
+<class 'torch.Tensor'> tensor(137892) 137892
+159936 ; loss 0.3 ; sentence/s 93 ; words/s 6074 ; accuracy train : 86.18
+<class 'torch.Tensor'> tensor(143395) 143395
+166336 ; loss 0.31 ; sentence/s 92 ; words/s 5969 ; accuracy train : 86.17
+<class 'torch.Tensor'> tensor(148882) 148882
+172736 ; loss 0.32 ; sentence/s 92 ; words/s 5962 ; accuracy train : 86.16
+<class 'torch.Tensor'> tensor(154359) 154359
+179136 ; loss 0.31 ; sentence/s 92 ; words/s 6035 ; accuracy train : 86.14
+<class 'torch.Tensor'> tensor(159864) 159864
+185536 ; loss 0.31 ; sentence/s 92 ; words/s 6146 ; accuracy train : 86.13
+<class 'torch.Tensor'> tensor(165311) 165311
+191936 ; loss 0.32 ; sentence/s 94 ; words/s 5915 ; accuracy train : 86.1
+<class 'torch.Tensor'> tensor(170768) 170768
+198336 ; loss 0.31 ; sentence/s 94 ; words/s 5966 ; accuracy train : 86.07
+<class 'torch.Tensor'> tensor(176279) 176279
+204736 ; loss 0.3 ; sentence/s 91 ; words/s 6186 ; accuracy train : 86.07
+<class 'torch.Tensor'> tensor(181766) 181766
+211136 ; loss 0.31 ; sentence/s 93 ; words/s 5953 ; accuracy train : 86.06
+<class 'torch.Tensor'> tensor(187267) 187267
+217536 ; loss 0.31 ; sentence/s 91 ; words/s 5892 ; accuracy train : 86.06
+<class 'torch.Tensor'> tensor(192759) 192759
+223936 ; loss 0.31 ; sentence/s 92 ; words/s 6033 ; accuracy train : 86.05
+<class 'torch.Tensor'> tensor(198231) 198231
+230336 ; loss 0.32 ; sentence/s 93 ; words/s 5946 ; accuracy train : 86.04
+<class 'torch.Tensor'> tensor(203673) 203673
+236736 ; loss 0.32 ; sentence/s 91 ; words/s 5983 ; accuracy train : 86.01
+results : epoch 3 ; mean accuracy train : 85.98
+
+VALIDATION : Epoch 3
+togrep : results : epoch 3 ; mean accuracy valid :              81.87
+saving model at epoch 3
+
+TRAINING : Epoch 4
+Learning rate : 0.0970299
+<class 'torch.Tensor'> tensor(5745) 5745
+6336 ; loss 0.25 ; sentence/s 94 ; words/s 6093 ; accuracy train : 89.77
+<class 'torch.Tensor'> tensor(11492) 11492
+12736 ; loss 0.25 ; sentence/s 94 ; words/s 6192 ; accuracy train : 89.78
+<class 'torch.Tensor'> tensor(17268) 17268
+19136 ; loss 0.24 ; sentence/s 93 ; words/s 6099 ; accuracy train : 89.94
+<class 'torch.Tensor'> tensor(23026) 23026
+25536 ; loss 0.24 ; sentence/s 93 ; words/s 6150 ; accuracy train : 89.95
+<class 'torch.Tensor'> tensor(28731) 28731
+31936 ; loss 0.25 ; sentence/s 95 ; words/s 5987 ; accuracy train : 89.78
+<class 'torch.Tensor'> tensor(34466) 34466
+38336 ; loss 0.24 ; sentence/s 95 ; words/s 5990 ; accuracy train : 89.76
+<class 'torch.Tensor'> tensor(40227) 40227
+44736 ; loss 0.25 ; sentence/s 94 ; words/s 5929 ; accuracy train : 89.79
+<class 'torch.Tensor'> tensor(45957) 45957
+51136 ; loss 0.24 ; sentence/s 95 ; words/s 5915 ; accuracy train : 89.76
+<class 'torch.Tensor'> tensor(51692) 51692
+57536 ; loss 0.24 ; sentence/s 92 ; words/s 6190 ; accuracy train : 89.74
+<class 'torch.Tensor'> tensor(57385) 57385
+63936 ; loss 0.25 ; sentence/s 92 ; words/s 5916 ; accuracy train : 89.66
+<class 'torch.Tensor'> tensor(63151) 63151
+70336 ; loss 0.24 ; sentence/s 93 ; words/s 5897 ; accuracy train : 89.7
+<class 'torch.Tensor'> tensor(68847) 68847
+76736 ; loss 0.25 ; sentence/s 94 ; words/s 6066 ; accuracy train : 89.64
+<class 'torch.Tensor'> tensor(74558) 74558
+83136 ; loss 0.25 ; sentence/s 91 ; words/s 5893 ; accuracy train : 89.61
+<class 'torch.Tensor'> tensor(80254) 80254
+89536 ; loss 0.25 ; sentence/s 92 ; words/s 5961 ; accuracy train : 89.57
+<class 'torch.Tensor'> tensor(85965) 85965
+95936 ; loss 0.25 ; sentence/s 94 ; words/s 6096 ; accuracy train : 89.55
+<class 'torch.Tensor'> tensor(91703) 91703
+102336 ; loss 0.25 ; sentence/s 95 ; words/s 6030 ; accuracy train : 89.55
+<class 'torch.Tensor'> tensor(97429) 97429
+108736 ; loss 0.25 ; sentence/s 94 ; words/s 6033 ; accuracy train : 89.55
+<class 'torch.Tensor'> tensor(103153) 103153
+115136 ; loss 0.25 ; sentence/s 93 ; words/s 6142 ; accuracy train : 89.54
+<class 'torch.Tensor'> tensor(108847) 108847
+121536 ; loss 0.25 ; sentence/s 94 ; words/s 6064 ; accuracy train : 89.51
+<class 'torch.Tensor'> tensor(114512) 114512
+127936 ; loss 0.26 ; sentence/s 95 ; words/s 6034 ; accuracy train : 89.46
+<class 'torch.Tensor'> tensor(120159) 120159
+134336 ; loss 0.26 ; sentence/s 93 ; words/s 6080 ; accuracy train : 89.4
+<class 'torch.Tensor'> tensor(125869) 125869
+140736 ; loss 0.25 ; sentence/s 93 ; words/s 6216 ; accuracy train : 89.4
+<class 'torch.Tensor'> tensor(131555) 131555
+147136 ; loss 0.25 ; sentence/s 91 ; words/s 6214 ; accuracy train : 89.37
+<class 'torch.Tensor'> tensor(137213) 137213
+153536 ; loss 0.26 ; sentence/s 93 ; words/s 6216 ; accuracy train : 89.33
+<class 'torch.Tensor'> tensor(142894) 142894
+159936 ; loss 0.26 ; sentence/s 93 ; words/s 6145 ; accuracy train : 89.31
+<class 'torch.Tensor'> tensor(148540) 148540
+166336 ; loss 0.26 ; sentence/s 94 ; words/s 6017 ; accuracy train : 89.27
+<class 'torch.Tensor'> tensor(154173) 154173
+172736 ; loss 0.27 ; sentence/s 94 ; words/s 6056 ; accuracy train : 89.22
+<class 'torch.Tensor'> tensor(159836) 159836
+179136 ; loss 0.26 ; sentence/s 94 ; words/s 6078 ; accuracy train : 89.19
+<class 'torch.Tensor'> tensor(165499) 165499
+185536 ; loss 0.26 ; sentence/s 93 ; words/s 6064 ; accuracy train : 89.17
+<class 'torch.Tensor'> tensor(171157) 171157
+191936 ; loss 0.26 ; sentence/s 94 ; words/s 6092 ; accuracy train : 89.14
+<class 'torch.Tensor'> tensor(176783) 176783
+198336 ; loss 0.27 ; sentence/s 95 ; words/s 6073 ; accuracy train : 89.1
+<class 'torch.Tensor'> tensor(182434) 182434
+204736 ; loss 0.26 ; sentence/s 93 ; words/s 6121 ; accuracy train : 89.08
+<class 'torch.Tensor'> tensor(188061) 188061
+211136 ; loss 0.27 ; sentence/s 94 ; words/s 6196 ; accuracy train : 89.04
+<class 'torch.Tensor'> tensor(193695) 193695
+217536 ; loss 0.27 ; sentence/s 91 ; words/s 5835 ; accuracy train : 89.01
+<class 'torch.Tensor'> tensor(199346) 199346
+223936 ; loss 0.26 ; sentence/s 90 ; words/s 5848 ; accuracy train : 88.99
+<class 'torch.Tensor'> tensor(204984) 204984
+230336 ; loss 0.26 ; sentence/s 93 ; words/s 5888 ; accuracy train : 88.97
+<class 'torch.Tensor'> tensor(210615) 210615
+236736 ; loss 0.27 ; sentence/s 92 ; words/s 6018 ; accuracy train : 88.94
+results : epoch 4 ; mean accuracy train : 88.95
+
+VALIDATION : Epoch 4
+togrep : results : epoch 4 ; mean accuracy valid :              78.9
+Shrinking lr by : 5. New lr = 0.01940598
+
+TRAINING : Epoch 5
+Learning rate : 0.0192119202
+<class 'torch.Tensor'> tensor(5919) 5919
+6336 ; loss 0.2 ; sentence/s 94 ; words/s 6250 ; accuracy train : 92.48
+<class 'torch.Tensor'> tensor(11872) 11872
+12736 ; loss 0.19 ; sentence/s 94 ; words/s 5966 ; accuracy train : 92.75
+<class 'torch.Tensor'> tensor(17836) 17836
+19136 ; loss 0.18 ; sentence/s 94 ; words/s 5952 ; accuracy train : 92.9
+<class 'torch.Tensor'> tensor(23769) 23769
+25536 ; loss 0.19 ; sentence/s 94 ; words/s 6165 ; accuracy train : 92.85
+<class 'torch.Tensor'> tensor(29744) 29744
+31936 ; loss 0.18 ; sentence/s 92 ; words/s 6134 ; accuracy train : 92.95
+<class 'torch.Tensor'> tensor(35706) 35706
+38336 ; loss 0.18 ; sentence/s 94 ; words/s 6167 ; accuracy train : 92.98
+<class 'torch.Tensor'> tensor(41714) 41714
+44736 ; loss 0.17 ; sentence/s 93 ; words/s 6159 ; accuracy train : 93.11
+<class 'torch.Tensor'> tensor(47698) 47698
+51136 ; loss 0.17 ; sentence/s 95 ; words/s 6081 ; accuracy train : 93.16
+<class 'torch.Tensor'> tensor(53687) 53687
+57536 ; loss 0.17 ; sentence/s 94 ; words/s 6024 ; accuracy train : 93.21
+<class 'torch.Tensor'> tensor(59707) 59707
+63936 ; loss 0.17 ; sentence/s 94 ; words/s 6031 ; accuracy train : 93.29
+<class 'torch.Tensor'> tensor(65699) 65699
+70336 ; loss 0.17 ; sentence/s 93 ; words/s 6125 ; accuracy train : 93.32
+<class 'torch.Tensor'> tensor(71706) 71706
+76736 ; loss 0.17 ; sentence/s 93 ; words/s 6114 ; accuracy train : 93.37
+<class 'torch.Tensor'> tensor(77706) 77706
+83136 ; loss 0.17 ; sentence/s 92 ; words/s 6096 ; accuracy train : 93.4
+<class 'torch.Tensor'> tensor(83753) 83753
+89536 ; loss 0.16 ; sentence/s 90 ; words/s 6016 ; accuracy train : 93.47
+<class 'torch.Tensor'> tensor(89754) 89754
+95936 ; loss 0.17 ; sentence/s 93 ; words/s 6021 ; accuracy train : 93.49
+<class 'torch.Tensor'> tensor(95793) 95793
+102336 ; loss 0.16 ; sentence/s 95 ; words/s 5996 ; accuracy train : 93.55
+<class 'torch.Tensor'> tensor(101797) 101797
+108736 ; loss 0.17 ; sentence/s 94 ; words/s 5962 ; accuracy train : 93.56
+<class 'torch.Tensor'> tensor(107825) 107825
+115136 ; loss 0.16 ; sentence/s 90 ; words/s 6106 ; accuracy train : 93.6
+<class 'torch.Tensor'> tensor(113837) 113837
+121536 ; loss 0.16 ; sentence/s 92 ; words/s 5898 ; accuracy train : 93.62
+<class 'torch.Tensor'> tensor(119819) 119819
+127936 ; loss 0.17 ; sentence/s 93 ; words/s 5985 ; accuracy train : 93.61
+<class 'torch.Tensor'> tensor(125840) 125840
+134336 ; loss 0.16 ; sentence/s 93 ; words/s 6234 ; accuracy train : 93.63
+<class 'torch.Tensor'> tensor(131853) 131853
+140736 ; loss 0.16 ; sentence/s 95 ; words/s 5953 ; accuracy train : 93.65
+<class 'torch.Tensor'> tensor(137872) 137872
+147136 ; loss 0.16 ; sentence/s 94 ; words/s 6076 ; accuracy train : 93.66
+<class 'torch.Tensor'> tensor(143903) 143903
+153536 ; loss 0.16 ; sentence/s 94 ; words/s 6088 ; accuracy train : 93.69
+<class 'torch.Tensor'> tensor(149924) 149924
+159936 ; loss 0.16 ; sentence/s 93 ; words/s 6049 ; accuracy train : 93.7
+<class 'torch.Tensor'> tensor(155918) 155918
+166336 ; loss 0.17 ; sentence/s 94 ; words/s 5976 ; accuracy train : 93.7
+<class 'torch.Tensor'> tensor(161958) 161958
+172736 ; loss 0.16 ; sentence/s 94 ; words/s 5972 ; accuracy train : 93.73
+<class 'torch.Tensor'> tensor(168022) 168022
+179136 ; loss 0.15 ; sentence/s 93 ; words/s 6171 ; accuracy train : 93.76
+<class 'torch.Tensor'> tensor(174059) 174059
+185536 ; loss 0.16 ; sentence/s 93 ; words/s 6290 ; accuracy train : 93.78
+<class 'torch.Tensor'> tensor(180067) 180067
+191936 ; loss 0.16 ; sentence/s 95 ; words/s 6004 ; accuracy train : 93.78
+<class 'torch.Tensor'> tensor(186118) 186118
+198336 ; loss 0.15 ; sentence/s 94 ; words/s 6145 ; accuracy train : 93.81
+<class 'torch.Tensor'> tensor(192118) 192118
+204736 ; loss 0.16 ; sentence/s 93 ; words/s 6115 ; accuracy train : 93.81
+<class 'torch.Tensor'> tensor(198144) 198144
+211136 ; loss 0.16 ; sentence/s 93 ; words/s 6066 ; accuracy train : 93.82
+<class 'torch.Tensor'> tensor(204197) 204197
+217536 ; loss 0.15 ; sentence/s 92 ; words/s 6025 ; accuracy train : 93.84
+<class 'torch.Tensor'> tensor(210206) 210206
+223936 ; loss 0.16 ; sentence/s 93 ; words/s 5816 ; accuracy train : 93.84
+<class 'torch.Tensor'> tensor(216207) 216207
+230336 ; loss 0.16 ; sentence/s 91 ; words/s 5723 ; accuracy train : 93.84
+<class 'torch.Tensor'> tensor(222231) 222231
+236736 ; loss 0.16 ; sentence/s 90 ; words/s 5889 ; accuracy train : 93.85
+results : epoch 5 ; mean accuracy train : 93.86
+
+VALIDATION : Epoch 5
+togrep : results : epoch 5 ; mean accuracy valid :              83.14
+saving model at epoch 5
+
+TRAINING : Epoch 6
+Learning rate : 0.019019800998
+<class 'torch.Tensor'> tensor(6137) 6137
+6336 ; loss 0.14 ; sentence/s 115 ; words/s 7283 ; accuracy train : 95.89
+<class 'torch.Tensor'> tensor(12214) 12214
+12736 ; loss 0.14 ; sentence/s 114 ; words/s 7318 ; accuracy train : 95.42
+<class 'torch.Tensor'> tensor(18360) 18360
+19136 ; loss 0.12 ; sentence/s 113 ; words/s 7316 ; accuracy train : 95.62
+<class 'torch.Tensor'> tensor(24490) 24490
+25536 ; loss 0.13 ; sentence/s 114 ; words/s 7357 ; accuracy train : 95.66
+<class 'torch.Tensor'> tensor(30600) 30600
+31936 ; loss 0.13 ; sentence/s 111 ; words/s 7420 ; accuracy train : 95.62
+<class 'torch.Tensor'> tensor(36686) 36686
+38336 ; loss 0.14 ; sentence/s 111 ; words/s 7588 ; accuracy train : 95.54
+<class 'torch.Tensor'> tensor(42819) 42819
+44736 ; loss 0.13 ; sentence/s 137 ; words/s 8599 ; accuracy train : 95.58
+<class 'torch.Tensor'> tensor(48909) 48909
+51136 ; loss 0.14 ; sentence/s 157 ; words/s 10314 ; accuracy train : 95.53
+<class 'torch.Tensor'> tensor(54983) 54983
+57536 ; loss 0.14 ; sentence/s 156 ; words/s 10403 ; accuracy train : 95.46
+<class 'torch.Tensor'> tensor(61111) 61111
+63936 ; loss 0.13 ; sentence/s 162 ; words/s 10065 ; accuracy train : 95.49
+<class 'torch.Tensor'> tensor(67233) 67233
+70336 ; loss 0.13 ; sentence/s 161 ; words/s 10043 ; accuracy train : 95.5
+<class 'torch.Tensor'> tensor(73349) 73349
+76736 ; loss 0.13 ; sentence/s 160 ; words/s 10160 ; accuracy train : 95.51
+<class 'torch.Tensor'> tensor(79423) 79423
+83136 ; loss 0.14 ; sentence/s 160 ; words/s 10135 ; accuracy train : 95.46
+<class 'torch.Tensor'> tensor(85526) 85526
+89536 ; loss 0.13 ; sentence/s 159 ; words/s 10080 ; accuracy train : 95.45
+<class 'torch.Tensor'> tensor(91645) 91645
+95936 ; loss 0.13 ; sentence/s 158 ; words/s 10044 ; accuracy train : 95.46
+<class 'torch.Tensor'> tensor(97702) 97702
+102336 ; loss 0.14 ; sentence/s 161 ; words/s 9921 ; accuracy train : 95.41
+<class 'torch.Tensor'> tensor(103823) 103823
+108736 ; loss 0.13 ; sentence/s 158 ; words/s 10365 ; accuracy train : 95.43
+<class 'torch.Tensor'> tensor(109916) 109916
+115136 ; loss 0.14 ; sentence/s 157 ; words/s 10207 ; accuracy train : 95.41
+<class 'torch.Tensor'> tensor(116001) 116001
+121536 ; loss 0.14 ; sentence/s 158 ; words/s 10203 ; accuracy train : 95.4
+<class 'torch.Tensor'> tensor(122113) 122113
+127936 ; loss 0.13 ; sentence/s 157 ; words/s 10204 ; accuracy train : 95.4
+<class 'torch.Tensor'> tensor(128210) 128210
+134336 ; loss 0.14 ; sentence/s 161 ; words/s 10114 ; accuracy train : 95.39
+<class 'torch.Tensor'> tensor(134332) 134332
+140736 ; loss 0.13 ; sentence/s 159 ; words/s 10367 ; accuracy train : 95.41
+<class 'torch.Tensor'> tensor(140419) 140419
+147136 ; loss 0.14 ; sentence/s 157 ; words/s 10403 ; accuracy train : 95.39
+<class 'torch.Tensor'> tensor(146526) 146526
+153536 ; loss 0.14 ; sentence/s 156 ; words/s 10560 ; accuracy train : 95.39
+<class 'torch.Tensor'> tensor(152632) 152632
+159936 ; loss 0.13 ; sentence/s 159 ; words/s 10380 ; accuracy train : 95.39
+<class 'torch.Tensor'> tensor(158688) 158688
+166336 ; loss 0.14 ; sentence/s 155 ; words/s 10247 ; accuracy train : 95.37
+<class 'torch.Tensor'> tensor(164734) 164734
+172736 ; loss 0.14 ; sentence/s 161 ; words/s 10117 ; accuracy train : 95.33
+<class 'torch.Tensor'> tensor(170822) 170822
+179136 ; loss 0.14 ; sentence/s 158 ; words/s 10322 ; accuracy train : 95.32
+<class 'torch.Tensor'> tensor(176896) 176896
+185536 ; loss 0.14 ; sentence/s 156 ; words/s 10344 ; accuracy train : 95.31
+<class 'torch.Tensor'> tensor(182971) 182971
+191936 ; loss 0.14 ; sentence/s 156 ; words/s 10522 ; accuracy train : 95.3
+<class 'torch.Tensor'> tensor(189055) 189055
+198336 ; loss 0.14 ; sentence/s 160 ; words/s 10113 ; accuracy train : 95.29
+<class 'torch.Tensor'> tensor(195128) 195128
+204736 ; loss 0.14 ; sentence/s 157 ; words/s 10421 ; accuracy train : 95.28
+<class 'torch.Tensor'> tensor(201207) 201207
+211136 ; loss 0.14 ; sentence/s 158 ; words/s 10377 ; accuracy train : 95.27
+<class 'torch.Tensor'> tensor(207321) 207321
+217536 ; loss 0.13 ; sentence/s 160 ; words/s 10327 ; accuracy train : 95.28
+<class 'torch.Tensor'> tensor(213396) 213396
+223936 ; loss 0.14 ; sentence/s 158 ; words/s 10350 ; accuracy train : 95.27
+<class 'torch.Tensor'> tensor(219489) 219489
+230336 ; loss 0.14 ; sentence/s 164 ; words/s 10582 ; accuracy train : 95.26
+<class 'torch.Tensor'> tensor(225612) 225612
+236736 ; loss 0.13 ; sentence/s 161 ; words/s 10574 ; accuracy train : 95.28
+results : epoch 6 ; mean accuracy train : 95.27
+
+VALIDATION : Epoch 6
+togrep : results : epoch 6 ; mean accuracy valid :              83.14
+Shrinking lr by : 5. New lr = 0.0038039601995999996
+
+TRAINING : Epoch 7
+Learning rate : 0.0037659205976039996
+<class 'torch.Tensor'> tensor(6175) 6175
+6336 ; loss 0.11 ; sentence/s 157 ; words/s 10469 ; accuracy train : 96.48
+<class 'torch.Tensor'> tensor(12364) 12364
+12736 ; loss 0.11 ; sentence/s 159 ; words/s 10057 ; accuracy train : 96.59
+<class 'torch.Tensor'> tensor(18538) 18538
+19136 ; loss 0.11 ; sentence/s 158 ; words/s 10526 ; accuracy train : 96.55
+<class 'torch.Tensor'> tensor(24711) 24711
+25536 ; loss 0.11 ; sentence/s 161 ; words/s 10365 ; accuracy train : 96.53
+<class 'torch.Tensor'> tensor(30892) 30892
+31936 ; loss 0.11 ; sentence/s 158 ; words/s 10239 ; accuracy train : 96.54
+<class 'torch.Tensor'> tensor(37087) 37087
+38336 ; loss 0.11 ; sentence/s 160 ; words/s 10246 ; accuracy train : 96.58
+<class 'torch.Tensor'> tensor(43260) 43260
+44736 ; loss 0.11 ; sentence/s 161 ; words/s 10166 ; accuracy train : 96.56
+<class 'torch.Tensor'> tensor(49439) 49439
+51136 ; loss 0.11 ; sentence/s 160 ; words/s 9984 ; accuracy train : 96.56
+<class 'torch.Tensor'> tensor(55616) 55616
+57536 ; loss 0.11 ; sentence/s 155 ; words/s 10329 ; accuracy train : 96.56
+<class 'torch.Tensor'> tensor(61774) 61774
+63936 ; loss 0.11 ; sentence/s 159 ; words/s 10367 ; accuracy train : 96.52
+<class 'torch.Tensor'> tensor(67933) 67933
+70336 ; loss 0.12 ; sentence/s 156 ; words/s 10328 ; accuracy train : 96.5
+<class 'torch.Tensor'> tensor(74136) 74136
+76736 ; loss 0.1 ; sentence/s 160 ; words/s 10081 ; accuracy train : 96.53
+<class 'torch.Tensor'> tensor(80300) 80300
+83136 ; loss 0.11 ; sentence/s 159 ; words/s 10425 ; accuracy train : 96.51
+<class 'torch.Tensor'> tensor(86469) 86469
+89536 ; loss 0.11 ; sentence/s 156 ; words/s 10129 ; accuracy train : 96.51
+<class 'torch.Tensor'> tensor(92670) 92670
+95936 ; loss 0.1 ; sentence/s 159 ; words/s 10171 ; accuracy train : 96.53
+<class 'torch.Tensor'> tensor(98864) 98864
+102336 ; loss 0.11 ; sentence/s 157 ; words/s 10322 ; accuracy train : 96.55
+<class 'torch.Tensor'> tensor(104994) 104994
+108736 ; loss 0.12 ; sentence/s 154 ; words/s 10065 ; accuracy train : 96.5
+<class 'torch.Tensor'> tensor(111164) 111164
+115136 ; loss 0.11 ; sentence/s 158 ; words/s 10230 ; accuracy train : 96.5
+<class 'torch.Tensor'> tensor(117339) 117339
+121536 ; loss 0.11 ; sentence/s 156 ; words/s 10388 ; accuracy train : 96.5
+<class 'torch.Tensor'> tensor(123538) 123538
+127936 ; loss 0.1 ; sentence/s 159 ; words/s 10327 ; accuracy train : 96.51
+<class 'torch.Tensor'> tensor(129695) 129695
+134336 ; loss 0.11 ; sentence/s 158 ; words/s 10674 ; accuracy train : 96.5
+<class 'torch.Tensor'> tensor(135866) 135866
+140736 ; loss 0.11 ; sentence/s 160 ; words/s 10215 ; accuracy train : 96.5
+<class 'torch.Tensor'> tensor(142037) 142037
+147136 ; loss 0.11 ; sentence/s 158 ; words/s 10531 ; accuracy train : 96.49
+<class 'torch.Tensor'> tensor(148206) 148206
+153536 ; loss 0.11 ; sentence/s 158 ; words/s 10091 ; accuracy train : 96.49
+<class 'torch.Tensor'> tensor(154381) 154381
+159936 ; loss 0.11 ; sentence/s 157 ; words/s 10140 ; accuracy train : 96.49
+<class 'torch.Tensor'> tensor(160561) 160561
+166336 ; loss 0.11 ; sentence/s 163 ; words/s 10085 ; accuracy train : 96.49
+<class 'torch.Tensor'> tensor(166760) 166760
+172736 ; loss 0.11 ; sentence/s 154 ; words/s 10459 ; accuracy train : 96.5
+<class 'torch.Tensor'> tensor(172914) 172914
+179136 ; loss 0.12 ; sentence/s 158 ; words/s 10177 ; accuracy train : 96.49
+<class 'torch.Tensor'> tensor(179102) 179102
+185536 ; loss 0.11 ; sentence/s 157 ; words/s 10251 ; accuracy train : 96.5
+<class 'torch.Tensor'> tensor(185266) 185266
+191936 ; loss 0.11 ; sentence/s 160 ; words/s 10386 ; accuracy train : 96.49
+<class 'torch.Tensor'> tensor(191446) 191446
+198336 ; loss 0.11 ; sentence/s 156 ; words/s 10294 ; accuracy train : 96.49
+<class 'torch.Tensor'> tensor(197632) 197632
+204736 ; loss 0.11 ; sentence/s 157 ; words/s 10304 ; accuracy train : 96.5
+<class 'torch.Tensor'> tensor(203811) 203811
+211136 ; loss 0.11 ; sentence/s 158 ; words/s 10193 ; accuracy train : 96.5
+<class 'torch.Tensor'> tensor(210017) 210017
+217536 ; loss 0.11 ; sentence/s 160 ; words/s 10227 ; accuracy train : 96.52
+<class 'torch.Tensor'> tensor(216187) 216187
+223936 ; loss 0.11 ; sentence/s 161 ; words/s 10031 ; accuracy train : 96.51
+<class 'torch.Tensor'> tensor(222325) 222325
+230336 ; loss 0.12 ; sentence/s 161 ; words/s 10508 ; accuracy train : 96.5
+<class 'torch.Tensor'> tensor(228502) 228502
+236736 ; loss 0.11 ; sentence/s 166 ; words/s 10548 ; accuracy train : 96.5
+results : epoch 7 ; mean accuracy train : 96.51
+
+VALIDATION : Epoch 7
+togrep : results : epoch 7 ; mean accuracy valid :              83.14
+Shrinking lr by : 5. New lr = 0.0007531841195207999
+
+TRAINING : Epoch 8
+Learning rate : 0.0007456522783255919
+<class 'torch.Tensor'> tensor(6185) 6185
+6336 ; loss 0.11 ; sentence/s 161 ; words/s 10197 ; accuracy train : 96.64
+<class 'torch.Tensor'> tensor(12395) 12395
+12736 ; loss 0.1 ; sentence/s 159 ; words/s 10191 ; accuracy train : 96.84
+<class 'torch.Tensor'> tensor(18611) 18611
+19136 ; loss 0.1 ; sentence/s 156 ; words/s 10350 ; accuracy train : 96.93
+<class 'torch.Tensor'> tensor(24812) 24812
+25536 ; loss 0.1 ; sentence/s 161 ; words/s 10106 ; accuracy train : 96.92
+<class 'torch.Tensor'> tensor(31001) 31001
+31936 ; loss 0.1 ; sentence/s 154 ; words/s 10514 ; accuracy train : 96.88
+<class 'torch.Tensor'> tensor(37202) 37202
+38336 ; loss 0.1 ; sentence/s 160 ; words/s 10162 ; accuracy train : 96.88
+<class 'torch.Tensor'> tensor(43413) 43413
+44736 ; loss 0.1 ; sentence/s 157 ; words/s 10303 ; accuracy train : 96.9
+<class 'torch.Tensor'> tensor(49615) 49615
+51136 ; loss 0.1 ; sentence/s 156 ; words/s 10556 ; accuracy train : 96.9
+<class 'torch.Tensor'> tensor(55800) 55800
+57536 ; loss 0.11 ; sentence/s 159 ; words/s 10232 ; accuracy train : 96.88
+<class 'torch.Tensor'> tensor(61988) 61988
+63936 ; loss 0.11 ; sentence/s 158 ; words/s 10291 ; accuracy train : 96.86
+<class 'torch.Tensor'> tensor(68180) 68180
+70336 ; loss 0.11 ; sentence/s 159 ; words/s 10300 ; accuracy train : 96.85
+<class 'torch.Tensor'> tensor(74386) 74386
+76736 ; loss 0.1 ; sentence/s 155 ; words/s 10722 ; accuracy train : 96.86
+<class 'torch.Tensor'> tensor(80585) 80585
+83136 ; loss 0.11 ; sentence/s 159 ; words/s 10082 ; accuracy train : 96.86
+<class 'torch.Tensor'> tensor(86792) 86792
+89536 ; loss 0.1 ; sentence/s 159 ; words/s 10120 ; accuracy train : 96.87
+<class 'torch.Tensor'> tensor(92971) 92971
+95936 ; loss 0.11 ; sentence/s 160 ; words/s 10199 ; accuracy train : 96.84
+<class 'torch.Tensor'> tensor(99181) 99181
+102336 ; loss 0.11 ; sentence/s 155 ; words/s 10663 ; accuracy train : 96.86
+<class 'torch.Tensor'> tensor(105385) 105385
+108736 ; loss 0.1 ; sentence/s 161 ; words/s 10342 ; accuracy train : 96.86
+<class 'torch.Tensor'> tensor(111563) 111563
+115136 ; loss 0.11 ; sentence/s 158 ; words/s 10235 ; accuracy train : 96.84
+<class 'torch.Tensor'> tensor(117768) 117768
+121536 ; loss 0.1 ; sentence/s 162 ; words/s 9948 ; accuracy train : 96.85
+<class 'torch.Tensor'> tensor(123966) 123966
+127936 ; loss 0.1 ; sentence/s 158 ; words/s 10261 ; accuracy train : 96.85
+<class 'torch.Tensor'> tensor(130171) 130171
+134336 ; loss 0.11 ; sentence/s 158 ; words/s 10238 ; accuracy train : 96.85
+<class 'torch.Tensor'> tensor(136377) 136377
+140736 ; loss 0.1 ; sentence/s 157 ; words/s 10272 ; accuracy train : 96.86
+<class 'torch.Tensor'> tensor(142576) 142576
+147136 ; loss 0.11 ; sentence/s 159 ; words/s 10507 ; accuracy train : 96.86
+<class 'torch.Tensor'> tensor(148786) 148786
+153536 ; loss 0.1 ; sentence/s 158 ; words/s 10124 ; accuracy train : 96.87
+<class 'torch.Tensor'> tensor(154998) 154998
+159936 ; loss 0.1 ; sentence/s 158 ; words/s 10254 ; accuracy train : 96.87
+<class 'torch.Tensor'> tensor(161201) 161201
+166336 ; loss 0.1 ; sentence/s 156 ; words/s 10307 ; accuracy train : 96.88
+<class 'torch.Tensor'> tensor(167390) 167390
+172736 ; loss 0.11 ; sentence/s 159 ; words/s 10058 ; accuracy train : 96.87
+<class 'torch.Tensor'> tensor(173593) 173593
+179136 ; loss 0.11 ; sentence/s 161 ; words/s 10341 ; accuracy train : 96.87
+<class 'torch.Tensor'> tensor(179803) 179803
+185536 ; loss 0.11 ; sentence/s 156 ; words/s 10459 ; accuracy train : 96.88
+<class 'torch.Tensor'> tensor(185966) 185966
+191936 ; loss 0.11 ; sentence/s 159 ; words/s 10289 ; accuracy train : 96.86
+<class 'torch.Tensor'> tensor(192179) 192179
+198336 ; loss 0.11 ; sentence/s 159 ; words/s 10327 ; accuracy train : 96.86
+<class 'torch.Tensor'> tensor(198366) 198366
+204736 ; loss 0.11 ; sentence/s 159 ; words/s 10428 ; accuracy train : 96.86
+<class 'torch.Tensor'> tensor(204560) 204560
+211136 ; loss 0.11 ; sentence/s 160 ; words/s 10064 ; accuracy train : 96.86
+<class 'torch.Tensor'> tensor(210738) 210738
+217536 ; loss 0.11 ; sentence/s 160 ; words/s 10241 ; accuracy train : 96.85
+<class 'torch.Tensor'> tensor(216931) 216931
+223936 ; loss 0.11 ; sentence/s 161 ; words/s 10341 ; accuracy train : 96.84
+<class 'torch.Tensor'> tensor(223094) 223094
+230336 ; loss 0.11 ; sentence/s 168 ; words/s 10303 ; accuracy train : 96.83
+<class 'torch.Tensor'> tensor(229287) 229287
+236736 ; loss 0.1 ; sentence/s 161 ; words/s 10801 ; accuracy train : 96.83
+results : epoch 8 ; mean accuracy train : 96.83
+
+VALIDATION : Epoch 8
+togrep : results : epoch 8 ; mean accuracy valid :              83.15
+saving model at epoch 8
+
+TRAINING : Epoch 9
+Learning rate : 0.000738195755542336
+<class 'torch.Tensor'> tensor(6204) 6204
+6336 ; loss 0.1 ; sentence/s 156 ; words/s 10479 ; accuracy train : 96.94
+<class 'torch.Tensor'> tensor(12385) 12385
+12736 ; loss 0.11 ; sentence/s 158 ; words/s 10177 ; accuracy train : 96.76
+<class 'torch.Tensor'> tensor(18592) 18592
+19136 ; loss 0.1 ; sentence/s 157 ; words/s 10481 ; accuracy train : 96.83
+<class 'torch.Tensor'> tensor(24776) 24776
+25536 ; loss 0.1 ; sentence/s 164 ; words/s 10038 ; accuracy train : 96.78
+<class 'torch.Tensor'> tensor(30974) 30974
+31936 ; loss 0.1 ; sentence/s 158 ; words/s 10190 ; accuracy train : 96.79
+<class 'torch.Tensor'> tensor(37191) 37191
+38336 ; loss 0.1 ; sentence/s 162 ; words/s 10330 ; accuracy train : 96.85
+<class 'torch.Tensor'> tensor(43382) 43382
+44736 ; loss 0.11 ; sentence/s 158 ; words/s 10437 ; accuracy train : 96.83
+<class 'torch.Tensor'> tensor(49559) 49559
+51136 ; loss 0.11 ; sentence/s 159 ; words/s 10501 ; accuracy train : 96.79
+<class 'torch.Tensor'> tensor(55735) 55735
+57536 ; loss 0.11 ; sentence/s 160 ; words/s 10197 ; accuracy train : 96.76
+<class 'torch.Tensor'> tensor(61925) 61925
+63936 ; loss 0.1 ; sentence/s 158 ; words/s 10317 ; accuracy train : 96.76
+<class 'torch.Tensor'> tensor(68114) 68114
+70336 ; loss 0.11 ; sentence/s 158 ; words/s 10166 ; accuracy train : 96.75
+<class 'torch.Tensor'> tensor(74322) 74322
+76736 ; loss 0.1 ; sentence/s 160 ; words/s 10032 ; accuracy train : 96.77
+<class 'torch.Tensor'> tensor(80523) 80523
+83136 ; loss 0.11 ; sentence/s 158 ; words/s 10369 ; accuracy train : 96.78
+<class 'torch.Tensor'> tensor(86711) 86711
+89536 ; loss 0.11 ; sentence/s 157 ; words/s 10463 ; accuracy train : 96.78
+<class 'torch.Tensor'> tensor(92932) 92932
+95936 ; loss 0.1 ; sentence/s 159 ; words/s 10166 ; accuracy train : 96.8
+<class 'torch.Tensor'> tensor(99146) 99146
+102336 ; loss 0.1 ; sentence/s 157 ; words/s 10355 ; accuracy train : 96.82
+<class 'torch.Tensor'> tensor(105366) 105366
+108736 ; loss 0.1 ; sentence/s 159 ; words/s 10163 ; accuracy train : 96.84
+<class 'torch.Tensor'> tensor(111584) 111584
+115136 ; loss 0.1 ; sentence/s 160 ; words/s 10014 ; accuracy train : 96.86
+<class 'torch.Tensor'> tensor(117781) 117781
+121536 ; loss 0.1 ; sentence/s 159 ; words/s 10206 ; accuracy train : 96.86
+<class 'torch.Tensor'> tensor(123984) 123984
+127936 ; loss 0.11 ; sentence/s 158 ; words/s 10344 ; accuracy train : 96.86
+<class 'torch.Tensor'> tensor(130154) 130154
+134336 ; loss 0.11 ; sentence/s 159 ; words/s 9871 ; accuracy train : 96.84
+<class 'torch.Tensor'> tensor(136350) 136350
+140736 ; loss 0.11 ; sentence/s 161 ; words/s 10371 ; accuracy train : 96.84
+<class 'torch.Tensor'> tensor(142574) 142574
+147136 ; loss 0.1 ; sentence/s 158 ; words/s 10459 ; accuracy train : 96.86
+<class 'torch.Tensor'> tensor(148760) 148760
+153536 ; loss 0.11 ; sentence/s 158 ; words/s 10252 ; accuracy train : 96.85
+<class 'torch.Tensor'> tensor(154933) 154933
+159936 ; loss 0.11 ; sentence/s 160 ; words/s 10304 ; accuracy train : 96.83
+<class 'torch.Tensor'> tensor(161140) 161140
+166336 ; loss 0.1 ; sentence/s 158 ; words/s 10194 ; accuracy train : 96.84
+<class 'torch.Tensor'> tensor(167347) 167347
+172736 ; loss 0.1 ; sentence/s 159 ; words/s 10351 ; accuracy train : 96.84
+<class 'torch.Tensor'> tensor(173567) 173567
+179136 ; loss 0.1 ; sentence/s 156 ; words/s 10336 ; accuracy train : 96.86
+<class 'torch.Tensor'> tensor(179757) 179757
+185536 ; loss 0.11 ; sentence/s 160 ; words/s 10180 ; accuracy train : 96.85
+<class 'torch.Tensor'> tensor(185970) 185970
+191936 ; loss 0.1 ; sentence/s 157 ; words/s 10447 ; accuracy train : 96.86
+<class 'torch.Tensor'> tensor(192168) 192168
+198336 ; loss 0.1 ; sentence/s 159 ; words/s 10282 ; accuracy train : 96.86
+<class 'torch.Tensor'> tensor(198386) 198386
+204736 ; loss 0.1 ; sentence/s 161 ; words/s 10236 ; accuracy train : 96.87
+<class 'torch.Tensor'> tensor(204608) 204608
+211136 ; loss 0.1 ; sentence/s 158 ; words/s 10263 ; accuracy train : 96.88
+<class 'torch.Tensor'> tensor(210843) 210843
+217536 ; loss 0.1 ; sentence/s 159 ; words/s 10357 ; accuracy train : 96.89
+<class 'torch.Tensor'> tensor(217024) 217024
+223936 ; loss 0.11 ; sentence/s 158 ; words/s 10486 ; accuracy train : 96.89
+<class 'torch.Tensor'> tensor(223214) 223214
+230336 ; loss 0.1 ; sentence/s 162 ; words/s 10684 ; accuracy train : 96.88
+<class 'torch.Tensor'> tensor(229430) 229430
+236736 ; loss 0.1 ; sentence/s 158 ; words/s 10966 ; accuracy train : 96.89
+results : epoch 9 ; mean accuracy train : 96.88
+
+VALIDATION : Epoch 9
+togrep : results : epoch 9 ; mean accuracy valid :              83.18
+saving model at epoch 9
+
+TRAINING : Epoch 10
+Learning rate : 0.0007308137979869126
+<class 'torch.Tensor'> tensor(6227) 6227
+6336 ; loss 0.1 ; sentence/s 158 ; words/s 10353 ; accuracy train : 97.3
+<class 'torch.Tensor'> tensor(12427) 12427
+12736 ; loss 0.1 ; sentence/s 160 ; words/s 10273 ; accuracy train : 97.09
+<class 'torch.Tensor'> tensor(18621) 18621
+19136 ; loss 0.1 ; sentence/s 158 ; words/s 10195 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(24843) 24843
+25536 ; loss 0.1 ; sentence/s 159 ; words/s 10104 ; accuracy train : 97.04
+<class 'torch.Tensor'> tensor(31042) 31042
+31936 ; loss 0.1 ; sentence/s 159 ; words/s 10121 ; accuracy train : 97.01
+<class 'torch.Tensor'> tensor(37265) 37265
+38336 ; loss 0.1 ; sentence/s 159 ; words/s 10314 ; accuracy train : 97.04
+<class 'torch.Tensor'> tensor(43462) 43462
+44736 ; loss 0.1 ; sentence/s 161 ; words/s 10103 ; accuracy train : 97.01
+<class 'torch.Tensor'> tensor(49686) 49686
+51136 ; loss 0.1 ; sentence/s 157 ; words/s 10439 ; accuracy train : 97.04
+<class 'torch.Tensor'> tensor(55866) 55866
+57536 ; loss 0.11 ; sentence/s 160 ; words/s 10153 ; accuracy train : 96.99
+<class 'torch.Tensor'> tensor(62042) 62042
+63936 ; loss 0.11 ; sentence/s 161 ; words/s 10035 ; accuracy train : 96.94
+<class 'torch.Tensor'> tensor(68235) 68235
+70336 ; loss 0.11 ; sentence/s 159 ; words/s 10431 ; accuracy train : 96.92
+<class 'torch.Tensor'> tensor(74458) 74458
+76736 ; loss 0.1 ; sentence/s 159 ; words/s 10362 ; accuracy train : 96.95
+<class 'torch.Tensor'> tensor(80662) 80662
+83136 ; loss 0.1 ; sentence/s 160 ; words/s 10221 ; accuracy train : 96.95
+<class 'torch.Tensor'> tensor(86863) 86863
+89536 ; loss 0.11 ; sentence/s 157 ; words/s 10143 ; accuracy train : 96.95
+<class 'torch.Tensor'> tensor(93079) 93079
+95936 ; loss 0.1 ; sentence/s 159 ; words/s 10297 ; accuracy train : 96.96
+<class 'torch.Tensor'> tensor(99264) 99264
+102336 ; loss 0.11 ; sentence/s 159 ; words/s 10136 ; accuracy train : 96.94
+<class 'torch.Tensor'> tensor(105504) 105504
+108736 ; loss 0.09 ; sentence/s 156 ; words/s 10476 ; accuracy train : 96.97
+<class 'torch.Tensor'> tensor(111696) 111696
+115136 ; loss 0.1 ; sentence/s 156 ; words/s 10064 ; accuracy train : 96.96
+<class 'torch.Tensor'> tensor(117896) 117896
+121536 ; loss 0.11 ; sentence/s 157 ; words/s 10423 ; accuracy train : 96.95
+<class 'torch.Tensor'> tensor(124103) 124103
+127936 ; loss 0.1 ; sentence/s 159 ; words/s 10172 ; accuracy train : 96.96
+<class 'torch.Tensor'> tensor(130319) 130319
+134336 ; loss 0.1 ; sentence/s 160 ; words/s 10096 ; accuracy train : 96.96
+<class 'torch.Tensor'> tensor(136522) 136522
+140736 ; loss 0.1 ; sentence/s 160 ; words/s 10151 ; accuracy train : 96.96
+<class 'torch.Tensor'> tensor(142717) 142717
+147136 ; loss 0.1 ; sentence/s 156 ; words/s 10378 ; accuracy train : 96.95
+<class 'torch.Tensor'> tensor(148921) 148921
+153536 ; loss 0.1 ; sentence/s 157 ; words/s 10179 ; accuracy train : 96.95
+<class 'torch.Tensor'> tensor(155133) 155133
+159936 ; loss 0.1 ; sentence/s 158 ; words/s 10268 ; accuracy train : 96.96
+<class 'torch.Tensor'> tensor(161352) 161352
+166336 ; loss 0.1 ; sentence/s 160 ; words/s 10272 ; accuracy train : 96.97
+<class 'torch.Tensor'> tensor(167573) 167573
+172736 ; loss 0.1 ; sentence/s 157 ; words/s 10496 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(173775) 173775
+179136 ; loss 0.1 ; sentence/s 159 ; words/s 10139 ; accuracy train : 96.97
+<class 'torch.Tensor'> tensor(179971) 179971
+185536 ; loss 0.1 ; sentence/s 157 ; words/s 10545 ; accuracy train : 96.97
+<class 'torch.Tensor'> tensor(186160) 186160
+191936 ; loss 0.11 ; sentence/s 160 ; words/s 10153 ; accuracy train : 96.96
+<class 'torch.Tensor'> tensor(192349) 192349
+198336 ; loss 0.1 ; sentence/s 156 ; words/s 10210 ; accuracy train : 96.95
+<class 'torch.Tensor'> tensor(198564) 198564
+204736 ; loss 0.1 ; sentence/s 159 ; words/s 10217 ; accuracy train : 96.96
+<class 'torch.Tensor'> tensor(204769) 204769
+211136 ; loss 0.1 ; sentence/s 159 ; words/s 10140 ; accuracy train : 96.96
+<class 'torch.Tensor'> tensor(210967) 210967
+217536 ; loss 0.11 ; sentence/s 157 ; words/s 10305 ; accuracy train : 96.95
+<class 'torch.Tensor'> tensor(217166) 217166
+223936 ; loss 0.1 ; sentence/s 161 ; words/s 9904 ; accuracy train : 96.95
+<class 'torch.Tensor'> tensor(223383) 223383
+230336 ; loss 0.1 ; sentence/s 160 ; words/s 10757 ; accuracy train : 96.95
+<class 'torch.Tensor'> tensor(229582) 229582
+236736 ; loss 0.1 ; sentence/s 159 ; words/s 10831 ; accuracy train : 96.95
+results : epoch 10 ; mean accuracy train : 96.95
+
+VALIDATION : Epoch 10
+togrep : results : epoch 10 ; mean accuracy valid :              83.25
+saving model at epoch 10
+
+TRAINING : Epoch 11
+Learning rate : 0.0007235056600070435
+<class 'torch.Tensor'> tensor(6217) 6217
+6336 ; loss 0.1 ; sentence/s 160 ; words/s 10114 ; accuracy train : 97.14
+<class 'torch.Tensor'> tensor(12400) 12400
+12736 ; loss 0.11 ; sentence/s 156 ; words/s 10333 ; accuracy train : 96.88
+<class 'torch.Tensor'> tensor(18607) 18607
+19136 ; loss 0.1 ; sentence/s 161 ; words/s 10110 ; accuracy train : 96.91
+<class 'torch.Tensor'> tensor(24823) 24823
+25536 ; loss 0.1 ; sentence/s 158 ; words/s 10347 ; accuracy train : 96.96
+<class 'torch.Tensor'> tensor(31032) 31032
+31936 ; loss 0.1 ; sentence/s 159 ; words/s 10136 ; accuracy train : 96.97
+<class 'torch.Tensor'> tensor(37255) 37255
+38336 ; loss 0.1 ; sentence/s 161 ; words/s 10021 ; accuracy train : 97.02
+<class 'torch.Tensor'> tensor(43451) 43451
+44736 ; loss 0.11 ; sentence/s 161 ; words/s 10024 ; accuracy train : 96.99
+<class 'torch.Tensor'> tensor(49656) 49656
+51136 ; loss 0.1 ; sentence/s 159 ; words/s 10023 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(55848) 55848
+57536 ; loss 0.1 ; sentence/s 158 ; words/s 10387 ; accuracy train : 96.96
+<class 'torch.Tensor'> tensor(62055) 62055
+63936 ; loss 0.1 ; sentence/s 157 ; words/s 10203 ; accuracy train : 96.96
+<class 'torch.Tensor'> tensor(68237) 68237
+70336 ; loss 0.11 ; sentence/s 160 ; words/s 10341 ; accuracy train : 96.93
+<class 'torch.Tensor'> tensor(74457) 74457
+76736 ; loss 0.1 ; sentence/s 158 ; words/s 10323 ; accuracy train : 96.95
+<class 'torch.Tensor'> tensor(80660) 80660
+83136 ; loss 0.1 ; sentence/s 162 ; words/s 10053 ; accuracy train : 96.95
+<class 'torch.Tensor'> tensor(86870) 86870
+89536 ; loss 0.1 ; sentence/s 159 ; words/s 10238 ; accuracy train : 96.95
+<class 'torch.Tensor'> tensor(93090) 93090
+95936 ; loss 0.1 ; sentence/s 159 ; words/s 10313 ; accuracy train : 96.97
+<class 'torch.Tensor'> tensor(99314) 99314
+102336 ; loss 0.1 ; sentence/s 161 ; words/s 9971 ; accuracy train : 96.99
+<class 'torch.Tensor'> tensor(105526) 105526
+108736 ; loss 0.1 ; sentence/s 159 ; words/s 10324 ; accuracy train : 96.99
+<class 'torch.Tensor'> tensor(111750) 111750
+115136 ; loss 0.1 ; sentence/s 159 ; words/s 10232 ; accuracy train : 97.01
+<class 'torch.Tensor'> tensor(117942) 117942
+121536 ; loss 0.11 ; sentence/s 159 ; words/s 10145 ; accuracy train : 96.99
+<class 'torch.Tensor'> tensor(124146) 124146
+127936 ; loss 0.1 ; sentence/s 156 ; words/s 10500 ; accuracy train : 96.99
+<class 'torch.Tensor'> tensor(130344) 130344
+134336 ; loss 0.11 ; sentence/s 158 ; words/s 10162 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(136550) 136550
+140736 ; loss 0.1 ; sentence/s 161 ; words/s 10127 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(142746) 142746
+147136 ; loss 0.11 ; sentence/s 158 ; words/s 10428 ; accuracy train : 96.97
+<class 'torch.Tensor'> tensor(148944) 148944
+153536 ; loss 0.1 ; sentence/s 159 ; words/s 10384 ; accuracy train : 96.97
+<class 'torch.Tensor'> tensor(155161) 155161
+159936 ; loss 0.1 ; sentence/s 159 ; words/s 10231 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(161377) 161377
+166336 ; loss 0.1 ; sentence/s 159 ; words/s 10153 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(167580) 167580
+172736 ; loss 0.1 ; sentence/s 159 ; words/s 10293 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(173794) 173794
+179136 ; loss 0.1 ; sentence/s 154 ; words/s 10725 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(179990) 179990
+185536 ; loss 0.1 ; sentence/s 157 ; words/s 10428 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(186200) 186200
+191936 ; loss 0.1 ; sentence/s 155 ; words/s 10220 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(192389) 192389
+198336 ; loss 0.11 ; sentence/s 159 ; words/s 10272 ; accuracy train : 96.97
+<class 'torch.Tensor'> tensor(198605) 198605
+204736 ; loss 0.1 ; sentence/s 156 ; words/s 10506 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(204819) 204819
+211136 ; loss 0.1 ; sentence/s 158 ; words/s 10303 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(211045) 211045
+217536 ; loss 0.1 ; sentence/s 159 ; words/s 10285 ; accuracy train : 96.99
+<class 'torch.Tensor'> tensor(217254) 217254
+223936 ; loss 0.1 ; sentence/s 159 ; words/s 10398 ; accuracy train : 96.99
+<class 'torch.Tensor'> tensor(223447) 223447
+230336 ; loss 0.11 ; sentence/s 161 ; words/s 10875 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(229624) 229624
+236736 ; loss 0.1 ; sentence/s 162 ; words/s 10736 ; accuracy train : 96.97
+results : epoch 11 ; mean accuracy train : 96.97
+
+VALIDATION : Epoch 11
+togrep : results : epoch 11 ; mean accuracy valid :              83.21
+Shrinking lr by : 5. New lr = 0.0001447011320014087
+
+TRAINING : Epoch 12
+Learning rate : 0.0001432541206813946
+<class 'torch.Tensor'> tensor(6194) 6194
+6336 ; loss 0.1 ; sentence/s 160 ; words/s 10151 ; accuracy train : 96.78
+<class 'torch.Tensor'> tensor(12405) 12405
+12736 ; loss 0.1 ; sentence/s 159 ; words/s 10261 ; accuracy train : 96.91
+<class 'torch.Tensor'> tensor(18594) 18594
+19136 ; loss 0.1 ; sentence/s 161 ; words/s 9965 ; accuracy train : 96.84
+<class 'torch.Tensor'> tensor(24800) 24800
+25536 ; loss 0.1 ; sentence/s 160 ; words/s 9879 ; accuracy train : 96.88
+<class 'torch.Tensor'> tensor(30996) 30996
+31936 ; loss 0.1 ; sentence/s 162 ; words/s 10289 ; accuracy train : 96.86
+<class 'torch.Tensor'> tensor(37200) 37200
+38336 ; loss 0.1 ; sentence/s 157 ; words/s 10076 ; accuracy train : 96.88
+<class 'torch.Tensor'> tensor(43412) 43412
+44736 ; loss 0.1 ; sentence/s 158 ; words/s 10444 ; accuracy train : 96.9
+<class 'torch.Tensor'> tensor(49614) 49614
+51136 ; loss 0.1 ; sentence/s 160 ; words/s 10289 ; accuracy train : 96.9
+<class 'torch.Tensor'> tensor(55813) 55813
+57536 ; loss 0.1 ; sentence/s 157 ; words/s 10275 ; accuracy train : 96.9
+<class 'torch.Tensor'> tensor(62015) 62015
+63936 ; loss 0.1 ; sentence/s 159 ; words/s 10544 ; accuracy train : 96.9
+<class 'torch.Tensor'> tensor(68224) 68224
+70336 ; loss 0.1 ; sentence/s 158 ; words/s 10431 ; accuracy train : 96.91
+<class 'torch.Tensor'> tensor(74424) 74424
+76736 ; loss 0.1 ; sentence/s 157 ; words/s 10286 ; accuracy train : 96.91
+<class 'torch.Tensor'> tensor(80641) 80641
+83136 ; loss 0.1 ; sentence/s 158 ; words/s 10145 ; accuracy train : 96.92
+<class 'torch.Tensor'> tensor(86874) 86874
+89536 ; loss 0.1 ; sentence/s 160 ; words/s 10010 ; accuracy train : 96.96
+<class 'torch.Tensor'> tensor(93074) 93074
+95936 ; loss 0.11 ; sentence/s 158 ; words/s 10330 ; accuracy train : 96.95
+<class 'torch.Tensor'> tensor(99290) 99290
+102336 ; loss 0.1 ; sentence/s 160 ; words/s 10214 ; accuracy train : 96.96
+<class 'torch.Tensor'> tensor(105510) 105510
+108736 ; loss 0.1 ; sentence/s 158 ; words/s 10232 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(111749) 111749
+115136 ; loss 0.09 ; sentence/s 160 ; words/s 10087 ; accuracy train : 97.0
+<class 'torch.Tensor'> tensor(117933) 117933
+121536 ; loss 0.11 ; sentence/s 158 ; words/s 10095 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(124130) 124130
+127936 ; loss 0.1 ; sentence/s 160 ; words/s 10342 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(130305) 130305
+134336 ; loss 0.11 ; sentence/s 159 ; words/s 9997 ; accuracy train : 96.95
+<class 'torch.Tensor'> tensor(136513) 136513
+140736 ; loss 0.1 ; sentence/s 156 ; words/s 10393 ; accuracy train : 96.96
+<class 'torch.Tensor'> tensor(142744) 142744
+147136 ; loss 0.09 ; sentence/s 159 ; words/s 10513 ; accuracy train : 96.97
+<class 'torch.Tensor'> tensor(148946) 148946
+153536 ; loss 0.1 ; sentence/s 159 ; words/s 10191 ; accuracy train : 96.97
+<class 'torch.Tensor'> tensor(155164) 155164
+159936 ; loss 0.1 ; sentence/s 158 ; words/s 10414 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(161373) 161373
+166336 ; loss 0.1 ; sentence/s 158 ; words/s 10277 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(167605) 167605
+172736 ; loss 0.1 ; sentence/s 159 ; words/s 10504 ; accuracy train : 96.99
+<class 'torch.Tensor'> tensor(173825) 173825
+179136 ; loss 0.1 ; sentence/s 157 ; words/s 10804 ; accuracy train : 97.0
+<class 'torch.Tensor'> tensor(180030) 180030
+185536 ; loss 0.1 ; sentence/s 152 ; words/s 10821 ; accuracy train : 97.0
+<class 'torch.Tensor'> tensor(186241) 186241
+191936 ; loss 0.1 ; sentence/s 159 ; words/s 10191 ; accuracy train : 97.0
+<class 'torch.Tensor'> tensor(192444) 192444
+198336 ; loss 0.11 ; sentence/s 162 ; words/s 10349 ; accuracy train : 97.0
+<class 'torch.Tensor'> tensor(198670) 198670
+204736 ; loss 0.1 ; sentence/s 158 ; words/s 10410 ; accuracy train : 97.01
+<class 'torch.Tensor'> tensor(204866) 204866
+211136 ; loss 0.1 ; sentence/s 160 ; words/s 10227 ; accuracy train : 97.0
+<class 'torch.Tensor'> tensor(211057) 211057
+217536 ; loss 0.1 ; sentence/s 156 ; words/s 10376 ; accuracy train : 96.99
+<class 'torch.Tensor'> tensor(217293) 217293
+223936 ; loss 0.1 ; sentence/s 160 ; words/s 10081 ; accuracy train : 97.01
+<class 'torch.Tensor'> tensor(223510) 223510
+230336 ; loss 0.1 ; sentence/s 165 ; words/s 10565 ; accuracy train : 97.01
+<class 'torch.Tensor'> tensor(229725) 229725
+236736 ; loss 0.1 ; sentence/s 164 ; words/s 10479 ; accuracy train : 97.01
+results : epoch 12 ; mean accuracy train : 97.02
+
+VALIDATION : Epoch 12
+togrep : results : epoch 12 ; mean accuracy valid :              83.23
+Shrinking lr by : 5. New lr = 2.8650824136278923e-05
+
+TRAINING : Epoch 13
+Learning rate : 2.8364315894916133e-05
+<class 'torch.Tensor'> tensor(6207) 6207
+6336 ; loss 0.1 ; sentence/s 157 ; words/s 10260 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(12389) 12389
+12736 ; loss 0.11 ; sentence/s 161 ; words/s 10228 ; accuracy train : 96.79
+<class 'torch.Tensor'> tensor(18611) 18611
+19136 ; loss 0.1 ; sentence/s 160 ; words/s 10123 ; accuracy train : 96.93
+<class 'torch.Tensor'> tensor(24807) 24807
+25536 ; loss 0.1 ; sentence/s 159 ; words/s 10196 ; accuracy train : 96.9
+<class 'torch.Tensor'> tensor(31023) 31023
+31936 ; loss 0.1 ; sentence/s 159 ; words/s 10412 ; accuracy train : 96.95
+<class 'torch.Tensor'> tensor(37219) 37219
+38336 ; loss 0.1 ; sentence/s 159 ; words/s 10437 ; accuracy train : 96.92
+<class 'torch.Tensor'> tensor(43446) 43446
+44736 ; loss 0.1 ; sentence/s 160 ; words/s 10446 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(49669) 49669
+51136 ; loss 0.1 ; sentence/s 159 ; words/s 10258 ; accuracy train : 97.01
+<class 'torch.Tensor'> tensor(55891) 55891
+57536 ; loss 0.1 ; sentence/s 160 ; words/s 10298 ; accuracy train : 97.03
+<class 'torch.Tensor'> tensor(62093) 62093
+63936 ; loss 0.1 ; sentence/s 154 ; words/s 10703 ; accuracy train : 97.02
+<class 'torch.Tensor'> tensor(68276) 68276
+70336 ; loss 0.11 ; sentence/s 161 ; words/s 10168 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(74491) 74491
+76736 ; loss 0.1 ; sentence/s 160 ; words/s 10240 ; accuracy train : 96.99
+<class 'torch.Tensor'> tensor(80688) 80688
+83136 ; loss 0.1 ; sentence/s 160 ; words/s 10412 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(86909) 86909
+89536 ; loss 0.1 ; sentence/s 157 ; words/s 10244 ; accuracy train : 97.0
+<class 'torch.Tensor'> tensor(93096) 93096
+95936 ; loss 0.11 ; sentence/s 161 ; words/s 10298 ; accuracy train : 96.97
+<class 'torch.Tensor'> tensor(99331) 99331
+102336 ; loss 0.1 ; sentence/s 160 ; words/s 10110 ; accuracy train : 97.0
+<class 'torch.Tensor'> tensor(105499) 105499
+108736 ; loss 0.11 ; sentence/s 155 ; words/s 10652 ; accuracy train : 96.97
+<class 'torch.Tensor'> tensor(111725) 111725
+115136 ; loss 0.1 ; sentence/s 159 ; words/s 10295 ; accuracy train : 96.98
+<class 'torch.Tensor'> tensor(117936) 117936
+121536 ; loss 0.1 ; sentence/s 161 ; words/s 10325 ; accuracy train : 96.99
+<class 'torch.Tensor'> tensor(124179) 124179
+127936 ; loss 0.09 ; sentence/s 158 ; words/s 10623 ; accuracy train : 97.01
+<class 'torch.Tensor'> tensor(130403) 130403
+134336 ; loss 0.1 ; sentence/s 161 ; words/s 10292 ; accuracy train : 97.03
+<class 'torch.Tensor'> tensor(136611) 136611
+140736 ; loss 0.1 ; sentence/s 157 ; words/s 10395 ; accuracy train : 97.02
+<class 'torch.Tensor'> tensor(142816) 142816
+147136 ; loss 0.1 ; sentence/s 160 ; words/s 10282 ; accuracy train : 97.02
+<class 'torch.Tensor'> tensor(149018) 149018
+153536 ; loss 0.1 ; sentence/s 160 ; words/s 10391 ; accuracy train : 97.02
+<class 'torch.Tensor'> tensor(155227) 155227
+159936 ; loss 0.1 ; sentence/s 159 ; words/s 10047 ; accuracy train : 97.02
+<class 'torch.Tensor'> tensor(161440) 161440
+166336 ; loss 0.1 ; sentence/s 160 ; words/s 10396 ; accuracy train : 97.02
+<class 'torch.Tensor'> tensor(167666) 167666
+172736 ; loss 0.09 ; sentence/s 160 ; words/s 10191 ; accuracy train : 97.03
+<class 'torch.Tensor'> tensor(173873) 173873
+179136 ; loss 0.1 ; sentence/s 159 ; words/s 10287 ; accuracy train : 97.03
+<class 'torch.Tensor'> tensor(180077) 180077
+185536 ; loss 0.1 ; sentence/s 160 ; words/s 10208 ; accuracy train : 97.02
+<class 'torch.Tensor'> tensor(186294) 186294
+191936 ; loss 0.1 ; sentence/s 158 ; words/s 10577 ; accuracy train : 97.03
+<class 'torch.Tensor'> tensor(192526) 192526
+198336 ; loss 0.1 ; sentence/s 158 ; words/s 10426 ; accuracy train : 97.04
+<class 'torch.Tensor'> tensor(198749) 198749
+204736 ; loss 0.1 ; sentence/s 160 ; words/s 10066 ; accuracy train : 97.05
+<class 'torch.Tensor'> tensor(204941) 204941
+211136 ; loss 0.1 ; sentence/s 159 ; words/s 10261 ; accuracy train : 97.04
+<class 'torch.Tensor'> tensor(211143) 211143
+217536 ; loss 0.1 ; sentence/s 157 ; words/s 10454 ; accuracy train : 97.03
+<class 'torch.Tensor'> tensor(217352) 217352
+223936 ; loss 0.1 ; sentence/s 161 ; words/s 10205 ; accuracy train : 97.03
+<class 'torch.Tensor'> tensor(223551) 223551
+230336 ; loss 0.1 ; sentence/s 157 ; words/s 10864 ; accuracy train : 97.03
+<class 'torch.Tensor'> tensor(229737) 229737
+236736 ; loss 0.1 ; sentence/s 168 ; words/s 10473 ; accuracy train : 97.02
+results : epoch 13 ; mean accuracy train : 97.02
+
+VALIDATION : Epoch 13
+togrep : results : epoch 13 ; mean accuracy valid :              83.17
+Shrinking lr by : 5. New lr = 5.672863178983227e-06
+
+TEST : Epoch 14
+
+VALIDATION : Epoch 1000000.0
+finalgrep : accuracy valid : 83.17
+finalgrep : accuracy test : 83.03
+fin
