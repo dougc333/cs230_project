@@ -1,0 +1,235 @@
+
+togrep : []
+
+Namespace(LSTM_num_layers=1, batch_size=128, data_dir='/home/dc/cs230_project/dataset', decay=0.99, dpout_fc=0.0, dpout_model=0.0, enc_lstm_dim=2048, encoder_type='InferSent', fc_dim=512, gpu_id=0, lrshrink=5, max_norm=5.0, minlr=1e-05, n_classes=2, n_enc_layers=1, n_epochs=12, nlipath='/home/dc/InferSent/dataset/SNLI', nonlinear_fc=1, optimizer='sgd,lr=0.1', outputdir='savedir/', outputmodelname='3layernonlineartanh.pickle', pool_type='max', seed=1234, weight_decay=0.0005, word_emb_dim=300)
+quora checkpoint len(train[s1]):60623,len(train[s2]):60623,          len(train[label]):60623
+============
+len(valid['s1']):20208, len(valid[s2]):20208,           len(valid['label']):20208
+============
+len(test['s1']):20208,len(test['s2']):20208,           len(test['label']):20208
+Found 47877(/106290) words with glove vectors
+Vocab size : 47877
+NLINet(
+  (encoder): InferSent(
+    (enc_lstm): LSTM(300, 2048, bidirectional=True)
+  )
+  (classifier): Sequential(
+    (0): Linear(in_features=16384, out_features=512, bias=True)
+    (1): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): Tanh()
+    (3): Dropout(p=0.0)
+    (4): Linear(in_features=512, out_features=512, bias=True)
+    (5): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (6): Tanh()
+    (7): Dropout(p=0.0)
+    (8): Linear(in_features=512, out_features=512, bias=True)
+    (9): BatchNorm1d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (10): Tanh()
+    (11): Dropout(p=0.0)
+    (12): Linear(in_features=512, out_features=2, bias=True)
+  )
+)
+total num epochs:12
+
+TRAINING : Epoch 1
+Learning rate : 0.1
+<class 'torch.Tensor'> tensor(8506) 8506
+12672 ; loss 0.62 ; sentence/s 465 ; words/s 34439 ; accuracy train : 66.45
+<class 'torch.Tensor'> tensor(17350) 17350
+25472 ; loss 0.59 ; sentence/s 470 ; words/s 33557 ; accuracy train : 67.77
+<class 'torch.Tensor'> tensor(26472) 26472
+38272 ; loss 0.57 ; sentence/s 453 ; words/s 34064 ; accuracy train : 68.94
+<class 'torch.Tensor'> tensor(35653) 35653
+51072 ; loss 0.56 ; sentence/s 453 ; words/s 34262 ; accuracy train : 69.63
+results : epoch 1 ; mean accuracy train : 70.1
+
+VALIDATION : Epoch 1
+togrep : results : epoch 1 ; mean accuracy valid :              72.92
+saving model at epoch 1
+
+TRAINING : Epoch 2
+Learning rate : 0.099
+<class 'torch.Tensor'> tensor(9390) 9390
+12672 ; loss 0.54 ; sentence/s 456 ; words/s 33613 ; accuracy train : 73.36
+<class 'torch.Tensor'> tensor(18853) 18853
+25472 ; loss 0.53 ; sentence/s 459 ; words/s 34082 ; accuracy train : 73.64
+<class 'torch.Tensor'> tensor(28356) 28356
+38272 ; loss 0.52 ; sentence/s 463 ; words/s 33295 ; accuracy train : 73.84
+<class 'torch.Tensor'> tensor(37951) 37951
+51072 ; loss 0.51 ; sentence/s 456 ; words/s 34033 ; accuracy train : 74.12
+results : epoch 2 ; mean accuracy train : 74.23
+
+VALIDATION : Epoch 2
+togrep : results : epoch 2 ; mean accuracy valid :              73.5
+saving model at epoch 2
+
+TRAINING : Epoch 3
+Learning rate : 0.09801
+<class 'torch.Tensor'> tensor(9692) 9692
+12672 ; loss 0.5 ; sentence/s 462 ; words/s 34085 ; accuracy train : 75.72
+<class 'torch.Tensor'> tensor(19517) 19517
+25472 ; loss 0.49 ; sentence/s 471 ; words/s 33502 ; accuracy train : 76.24
+<class 'torch.Tensor'> tensor(29288) 29288
+38272 ; loss 0.5 ; sentence/s 460 ; words/s 34012 ; accuracy train : 76.27
+<class 'torch.Tensor'> tensor(39010) 39010
+51072 ; loss 0.49 ; sentence/s 457 ; words/s 35004 ; accuracy train : 76.19
+results : epoch 3 ; mean accuracy train : 76.34
+
+VALIDATION : Epoch 3
+togrep : results : epoch 3 ; mean accuracy valid :              75.63
+saving model at epoch 3
+
+TRAINING : Epoch 4
+Learning rate : 0.0970299
+<class 'torch.Tensor'> tensor(9992) 9992
+12672 ; loss 0.47 ; sentence/s 453 ; words/s 35049 ; accuracy train : 78.06
+<class 'torch.Tensor'> tensor(19939) 19939
+25472 ; loss 0.47 ; sentence/s 470 ; words/s 33761 ; accuracy train : 77.89
+<class 'torch.Tensor'> tensor(29916) 29916
+38272 ; loss 0.46 ; sentence/s 460 ; words/s 34268 ; accuracy train : 77.91
+<class 'torch.Tensor'> tensor(39917) 39917
+51072 ; loss 0.46 ; sentence/s 457 ; words/s 34113 ; accuracy train : 77.96
+results : epoch 4 ; mean accuracy train : 77.97
+
+VALIDATION : Epoch 4
+togrep : results : epoch 4 ; mean accuracy valid :              76.71
+saving model at epoch 4
+
+TRAINING : Epoch 5
+Learning rate : 0.096059601
+<class 'torch.Tensor'> tensor(10196) 10196
+12672 ; loss 0.44 ; sentence/s 470 ; words/s 33487 ; accuracy train : 79.66
+<class 'torch.Tensor'> tensor(20355) 20355
+25472 ; loss 0.45 ; sentence/s 467 ; words/s 33869 ; accuracy train : 79.51
+<class 'torch.Tensor'> tensor(30561) 30561
+38272 ; loss 0.44 ; sentence/s 465 ; words/s 33946 ; accuracy train : 79.59
+<class 'torch.Tensor'> tensor(40705) 40705
+51072 ; loss 0.44 ; sentence/s 446 ; words/s 34407 ; accuracy train : 79.5
+results : epoch 5 ; mean accuracy train : 79.57
+
+VALIDATION : Epoch 5
+togrep : results : epoch 5 ; mean accuracy valid :              77.05
+saving model at epoch 5
+
+TRAINING : Epoch 6
+Learning rate : 0.09509900499
+<class 'torch.Tensor'> tensor(10355) 10355
+12672 ; loss 0.42 ; sentence/s 450 ; words/s 34023 ; accuracy train : 80.9
+<class 'torch.Tensor'> tensor(20698) 20698
+25472 ; loss 0.42 ; sentence/s 457 ; words/s 33597 ; accuracy train : 80.85
+<class 'torch.Tensor'> tensor(31050) 31050
+38272 ; loss 0.42 ; sentence/s 450 ; words/s 33837 ; accuracy train : 80.86
+<class 'torch.Tensor'> tensor(41401) 41401
+51072 ; loss 0.41 ; sentence/s 450 ; words/s 33790 ; accuracy train : 80.86
+results : epoch 6 ; mean accuracy train : 80.96
+
+VALIDATION : Epoch 6
+togrep : results : epoch 6 ; mean accuracy valid :              77.89
+saving model at epoch 6
+
+TRAINING : Epoch 7
+Learning rate : 0.0941480149401
+<class 'torch.Tensor'> tensor(10563) 10563
+12672 ; loss 0.39 ; sentence/s 463 ; words/s 34356 ; accuracy train : 82.52
+<class 'torch.Tensor'> tensor(21153) 21153
+25472 ; loss 0.39 ; sentence/s 465 ; words/s 34183 ; accuracy train : 82.63
+<class 'torch.Tensor'> tensor(31667) 31667
+38272 ; loss 0.4 ; sentence/s 465 ; words/s 34093 ; accuracy train : 82.47
+<class 'torch.Tensor'> tensor(42218) 42218
+51072 ; loss 0.39 ; sentence/s 461 ; words/s 33395 ; accuracy train : 82.46
+results : epoch 7 ; mean accuracy train : 82.46
+
+VALIDATION : Epoch 7
+togrep : results : epoch 7 ; mean accuracy valid :              75.45
+Shrinking lr by : 5. New lr = 0.01882960298802
+
+TRAINING : Epoch 8
+Learning rate : 0.0186413069581398
+<class 'torch.Tensor'> tensor(10774) 10774
+12672 ; loss 0.37 ; sentence/s 469 ; words/s 33726 ; accuracy train : 84.17
+<class 'torch.Tensor'> tensor(21603) 21603
+25472 ; loss 0.36 ; sentence/s 453 ; words/s 33276 ; accuracy train : 84.39
+<class 'torch.Tensor'> tensor(32411) 32411
+38272 ; loss 0.36 ; sentence/s 458 ; words/s 33563 ; accuracy train : 84.4
+<class 'torch.Tensor'> tensor(43269) 43269
+51072 ; loss 0.36 ; sentence/s 444 ; words/s 34544 ; accuracy train : 84.51
+results : epoch 8 ; mean accuracy train : 84.53
+
+VALIDATION : Epoch 8
+togrep : results : epoch 8 ; mean accuracy valid :              78.69
+saving model at epoch 8
+
+TRAINING : Epoch 9
+Learning rate : 0.0184548938885584
+<class 'torch.Tensor'> tensor(10908) 10908
+12672 ; loss 0.36 ; sentence/s 449 ; words/s 34593 ; accuracy train : 85.22
+<class 'torch.Tensor'> tensor(21785) 21785
+25472 ; loss 0.36 ; sentence/s 464 ; words/s 34365 ; accuracy train : 85.1
+<class 'torch.Tensor'> tensor(32640) 32640
+38272 ; loss 0.36 ; sentence/s 464 ; words/s 34138 ; accuracy train : 85.0
+<class 'torch.Tensor'> tensor(43482) 43482
+51072 ; loss 0.36 ; sentence/s 463 ; words/s 34114 ; accuracy train : 84.93
+results : epoch 9 ; mean accuracy train : 84.95
+
+VALIDATION : Epoch 9
+togrep : results : epoch 9 ; mean accuracy valid :              78.01
+Shrinking lr by : 5. New lr = 0.00369097877771168
+
+TRAINING : Epoch 10
+Learning rate : 0.003654068989934563
+<class 'torch.Tensor'> tensor(10944) 10944
+12672 ; loss 0.35 ; sentence/s 461 ; words/s 34067 ; accuracy train : 85.5
+<class 'torch.Tensor'> tensor(21869) 21869
+25472 ; loss 0.35 ; sentence/s 457 ; words/s 34708 ; accuracy train : 85.43
+<class 'torch.Tensor'> tensor(32837) 32837
+38272 ; loss 0.35 ; sentence/s 458 ; words/s 33771 ; accuracy train : 85.51
+<class 'torch.Tensor'> tensor(43747) 43747
+51072 ; loss 0.35 ; sentence/s 456 ; words/s 33772 ; accuracy train : 85.44
+results : epoch 10 ; mean accuracy train : 85.46
+
+VALIDATION : Epoch 10
+togrep : results : epoch 10 ; mean accuracy valid :              78.57
+Shrinking lr by : 5. New lr = 0.0007308137979869126
+
+TRAINING : Epoch 11
+Learning rate : 0.0007235056600070435
+<class 'torch.Tensor'> tensor(10906) 10906
+12672 ; loss 0.35 ; sentence/s 468 ; words/s 33636 ; accuracy train : 85.2
+<class 'torch.Tensor'> tensor(21869) 21869
+25472 ; loss 0.35 ; sentence/s 454 ; words/s 34820 ; accuracy train : 85.43
+<class 'torch.Tensor'> tensor(32845) 32845
+38272 ; loss 0.35 ; sentence/s 456 ; words/s 33479 ; accuracy train : 85.53
+<class 'torch.Tensor'> tensor(43824) 43824
+51072 ; loss 0.34 ; sentence/s 459 ; words/s 33318 ; accuracy train : 85.59
+results : epoch 11 ; mean accuracy train : 85.56
+
+VALIDATION : Epoch 11
+togrep : results : epoch 11 ; mean accuracy valid :              78.71
+saving model at epoch 11
+
+TRAINING : Epoch 12
+Learning rate : 0.0007162706034069731
+<class 'torch.Tensor'> tensor(10986) 10986
+12672 ; loss 0.35 ; sentence/s 458 ; words/s 33885 ; accuracy train : 85.83
+<class 'torch.Tensor'> tensor(21908) 21908
+25472 ; loss 0.35 ; sentence/s 454 ; words/s 33868 ; accuracy train : 85.58
+<class 'torch.Tensor'> tensor(32843) 32843
+38272 ; loss 0.35 ; sentence/s 460 ; words/s 33512 ; accuracy train : 85.53
+<class 'torch.Tensor'> tensor(43794) 43794
+51072 ; loss 0.35 ; sentence/s 456 ; words/s 33901 ; accuracy train : 85.54
+results : epoch 12 ; mean accuracy train : 85.56
+
+VALIDATION : Epoch 12
+togrep : results : epoch 12 ; mean accuracy valid :              78.7
+Shrinking lr by : 5. New lr = 0.0001432541206813946
+saving state dict
+done saving state dict
+
+TEST : Epoch 13
+calculating validation error
+
+VALIDATION : Epoch 1000000.0
+finalgrep : accuracy valid : 78.7
+calculating test error
+finalgrep : accuracy test : 78.13
+fin 1814.2914187908173
