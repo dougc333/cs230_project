@@ -1,4 +1,13 @@
-quora_duplicate_questions.tsv
-glove.840B.300d.txt
-datasets/*
 processed/*
+savedir/*
+dataset/quora_duplicate_questions.tsv
+dataset/GloVe/glove.840B.300d.txt
+create mode 100644 dataset/MultiNLI/multinli_0.9.zip
+dataset/glove.840B.300d.txt
+dataset/glove.840B.300d.zip
+dataset/crawl-300d-2M.vec.zip
+datasets/GloVe/*
+datasets/fastText/*
+datasets/SNLI/*
+datasets/MultiNLI/*
+

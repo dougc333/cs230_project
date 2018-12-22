@@ -1,4 +1,0 @@
-
-togrep : []
-
-Namespace(LSTM_num_layers=1, batch_size=128, data_dir='/home/ubuntu/cs230_project/dataset', decay=0.99, dpout_fc=0.0, dpout_model=0.0, enc_lstm_dim=4096, encoder_type='InferSent', fc_dim=512, gpu_id=0, lrshrink=5, max_norm=5.0, minlr=1e-05, n_classes=2, n_enc_layers=1, n_epochs=12, nlipath='/home/ubuntu/InferSent/dataset/SNLI', nonlinear_fc=1, optimizer='sgd,lr=0.1', outputdir='savedir/', outputmodelname='3layernonlinear4096.pickle', pool_type='max', seed=1234, weight_decay=0.0005, word_emb_dim=300)
